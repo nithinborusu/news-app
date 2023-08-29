@@ -3,13 +3,86 @@
 <html>
 <head>
   <title>News Website</title>
-  <link rel="stylesheet" href="/styles.css">
+  <style>
+  body {
+  font-family: Arial, sans-serif;
+  background-color:#02B290;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Added flex-direction to align header and main content */
+  align-items: center;
+  min-height: 100vh; /* Changed height to min-height for smaller content */
+  position: relative; /* Added to establish a positioning context for navigation */
+}
+
+header {
+  background-color:#242B2E;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  width: 100%; /* Make header span the entire width */
+}
+
+nav {
+  position: absolute; /* Position navigation absolutely within the header */
+  top: 1rem; /* Adjust top value to desired spacing */
+  right: 1rem; /* Position to the top right corner */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center; /* Align items vertically in the middle */
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ff6600;
+}
+
+main {
+  text-align: center;
+  padding: 2rem;
+  flex: 1; /* Fill remaining vertical space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 0; /* Remove default margin for p element */
+}
+
+  
+
+ 
+</style>
 </head>
 <body>
   <header>
+
     <nav>
       <ul>
-        <li><a href="/">Home</a></li>
         <li><a href="/signin">Sign In</a></li>
         <li><a href="/signup">Sign Up</a></li>
       </ul>
