@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News Page</title>
+</head>
+<body>
+    <h1>Welcome to the News Page!</h1>
+    
+    <!-- Search Form -->
+    <form action="/search" method="get">
+        <input type="text" name="q" placeholder="Search for news...">
+        <button type="submit">Search</button>
+    </form>
+    
+    <ul>
+        <% if (newsData && newsData.length > 0) { %>
+            <% newsData.forEach(article => { %>
+                <li>
+                    <h2><%= article.title %></h2>
+                    <p><%= article.description %></p>
+                </li>
+            <% }); %>
+        <% } else { %>
+            <p>No news articles found for "<%= searchTerm %>".</p>
+        <% } %>
+    </ul>
+</body>
+</html>
